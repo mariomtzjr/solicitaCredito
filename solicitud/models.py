@@ -1,13 +1,14 @@
 from django.db import models
-from cliente.models import Cliente
 from credito.models import Credito
+from cliente.models import Cliente
 
 
 # Create your models here.
 class Solicitud(models.Model):
-    num_solicitud = models.IntegerField(
+    cod_solicitud = models.CharField(
         null=False,
         blank=False,
+        max_length=150,
         verbose_name="Número de Solicitud",
     )
     cliente = models.ForeignKey(
@@ -32,4 +33,4 @@ class Solicitud(models.Model):
         verbose_name_plural = "Solicitudes"
 
     def __str__(self):
-        return self.num_solicitud
+        return self.cod_solicitud

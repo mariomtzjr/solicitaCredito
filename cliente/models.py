@@ -1,5 +1,4 @@
 from django.db import models
-from credito.models import Credito
 
 
 # Create your models here.
@@ -31,10 +30,6 @@ class Cliente(models.Model):
     has_credito = models.BooleanField(
         verbose_name="¿Tiene crédito?",
         default=False,
-    )
-    codigo_credito = models.ForeignKey(
-        Credito,
-        on_delete=models.CASCADE,
     )
     created_at = models.DateTimeField(
         verbose_name="Fecha de creación",

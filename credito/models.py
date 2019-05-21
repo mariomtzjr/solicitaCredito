@@ -1,4 +1,5 @@
 from django.db import models
+from cliente.models import Cliente
 
 
 # Create your models here.
@@ -8,6 +9,10 @@ class Credito(models.Model):
         blank=False,
         max_length=150,
         verbose_name="Código de Crédito",
+    )
+    cliente = models.ForeignKey(
+        Cliente,
+        on_delete=models.CASCADE,
     )
     cantidad = models.FloatField(
         null=False,

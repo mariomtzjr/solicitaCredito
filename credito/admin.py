@@ -7,6 +7,7 @@ class CreditoAdmin(admin.ModelAdmin):
 
     list_display = (
         'codigo_credito',
+        'cliente',
         'cantidad',
         'plazo',
         'created_at',
