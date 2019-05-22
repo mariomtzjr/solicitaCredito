@@ -45,6 +45,6 @@ class Cliente(models.Model):
         verbose_name_plural = "Clientes"
 
     def __str__(self):
-        nombre_completo = self.nombre + " " + self.apellido_paterno + " " + self.apellido
+        nombre_completo = self.nombre + " " + self.apellido_paterno + " " + self.apellido_materno
 
         return nombre_completo
