@@ -1,10 +1,8 @@
 FROM python:3.6-alpine
 
+# Set environment varibles
+ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED=1
-
-# Add create super user
-# ADD ./web/bin/install.sh install.sh
-# RUN chmod +x install.sh
 
 #Install extra libs for mysql
 RUN apk add --update --upgrade --no-cache --virtual .build-deps\
